@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Hobby</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+        body {
+            background-color:white;
+	        font-family: Verdana, sans-serif;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 40px;
+        }
+        #button {
+            background-color: white;
+            border: solid;
+            border-color: black;
+            border-radius: 3px;
+            color: black;
+        }
+        #button:hover {
+            background-color:azure;
+            border: solid;
+            border-radius: 3px;
+            color: black;
+        }
+        <!-- rest in style.css -->
+    </style>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/src/zero-md.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+	<header>
+        <img id="logo" src="https://fastly.picsum.photos/id/528/300/300.jpg?hmac=KAdHgNv1rlckhREAdoPUz4QCGNf-ZhSUIEBcBU9cMOg">
+        <p id="nav"><a href="https://www.imdb.com/">Main page</a></p>
+        <p id="nav"><a href="https://www.imdb.com/">Blog</a></p>
+        <p id="nav"><a href="https://www.imdb.com/">Projects</a></p>
+        <p id="nav"><a href="https://www.imdb.com/">About me</a></p>
+	</header>
+    <hr><h2>Ostatnie posty</h2><hr>
+	<article>
+    <h2>Moje hobby</h2><h4>02/02/2022</h4>
+    <img src="https://fastly.picsum.photos/id/528/300/300.jpg?hmac=KAdHgNv1rlckhREAdoPUz4QCGNf-ZhSUIEBcBU9cMOg">
+		<p>Moim ulubionym hobby jest czytanie książek. Uwielbiam zagłębiać się w różne światy i poznawać nowe postacie.
+          Często czytam powieści fantastyczne, ale również interesuję się literaturą popularnonaukową oraz biografiami.
+          Książki pozwalają mi na oderwanie się od rzeczywistości i na chwilę zapomnienie o codziennych problemach.
+          Czytanie to dla mnie sposób na relaks i rozwijanie wyobraźni.</p>
+    </article>
+
+    <zero-md src="test.md"></zero-md>
+    <zero-md>
+      <!-- Write your markdown inside a `<script type="text/markdown">` tag -->
+      <script type="text/markdown">
+        # **This** is my [markdown](https://example.com)
+      </script>
+    </zero-md>
+    <zero-md src="https://example.com/markdown.md"></zero-md>
+
+    <footer>
+        <h2>Any questions?</h2>
+        <input type="button" id="button" value="Yes" onclick="question('yes')">
+        <input type="button" id="button" value="No" onclick="question('no')">
+        <p id="answer"></p>
+    </footer>
+</body>
+</html>
