@@ -1,8 +1,0 @@
-### First post
-
-Hello, World!
-
-```
-printf("Hello, World!");
-```
-
