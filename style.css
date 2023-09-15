@@ -74,3 +74,7 @@ footer {
     left: 50%;
     transform: translateX(-50%);
 }
+#markdown {
+    color:black;
+    mix-blend-mode: normal;
+}
