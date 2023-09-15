@@ -27,7 +27,6 @@ p {
     font-size: 20px;
 }
 img {
-    float: center;
     padding: 2%;
     display: block;
 }
@@ -67,6 +66,12 @@ footer {
     margin-left: 0%;
     color: black;
     mix-blend-mode: normal;
+}
+#img1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 /* change things for mobile */
 @media (max-width: 767px) {
