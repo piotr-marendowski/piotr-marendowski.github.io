@@ -16,7 +16,16 @@
         <p id="nav"><a href="about.html">About</a></p>
     </header><hr>
 
-    
+    <div id="content"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      fetch('posts/index.md')
+        .then(response => response.text())
+        .then(text => {
+          const html = marked(text);
+          document.getElementById('content').innerHTML = html;
+        });
+    </script>
 
     <footer>
         <p>Any questions?</p>
