@@ -1,25 +1,6 @@
 body {
-    background-color:#222222;
     font-family: Verdana, sans-serif;
-    color: white;
-}
-a {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-}
-#button {
-    background-color: white;
-    border: solid;
-    border-color: black;
-    border-radius: 3px;
-    color: black;
-}
-#button:hover {
-    background-color:azure;
-    border: solid;
-    border-radius: 3px;
-    color: black;
+    mix-blend-mode: normal;
 }
 header {
     font-family: Times New Roman, serif;
@@ -27,6 +8,11 @@ header {
     padding-top: 1%;
     padding-bottom: 1%;
     margin: 1%;
+}
+a {
+    color: gray;
+    text-decoration: none;
+    font-size: 30px;
 }
 a:hover {
     color: white;
@@ -68,7 +54,7 @@ img {
     border-color: black;
     border-radius: 3px;
     color: black;
-    padding: 10px 30px;
+    padding: 5px 15px;
     text-align: center;
     font-size: 20px;
 }
@@ -77,7 +63,7 @@ img {
     border: solid;
     border-radius: 3px;
     color: black;
-    padding: 10px 30px;
+    padding: 5px 15px;
     text-align: center;
     font-size: 20px;
 }
