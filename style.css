@@ -75,7 +75,8 @@ footer {
     transform: translateX(-50%);
 }
 #markdown {
-    text-align: center;
+    font-size: 20px;
+    margin-left: 0%;
     color: black;
     mix-blend-mode: normal;
 }
