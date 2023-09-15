@@ -44,7 +44,7 @@ article {
 }
 @media screen and (max-width: 800px) {
     article {
-        width: 100%;
+        padding: 2%;
     }
 }
 footer {
