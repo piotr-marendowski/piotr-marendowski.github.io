@@ -9,3 +9,8 @@ function question(answer)
         document.getElementById("answer").scrollIntoView();
     }
 }
+function closeNotification()
+{
+  var notification = document.getElementById("notification");
+  notification.style.display = "none";
+}
