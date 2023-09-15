@@ -63,13 +63,10 @@ footer {
     background-color: azure;
 }
 #markdown {
-    font-size: 25px;
+    font-size: 50px;
     margin-left: 0%;
     color: black;
     mix-blend-mode: normal;
-}
-#img-mobile {
-    width:10em;
 }
 /* change things for mobile */
 @media (max-width: 767px) {
@@ -81,9 +78,6 @@ footer {
     a {
         color: gray;
         text-decoration: none;
-        font-size: 10px;
-    }
-    #img-mobile {
-        width:5em;
+        font-size: 20px;
     }
 }
