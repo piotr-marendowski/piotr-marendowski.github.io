@@ -42,7 +42,7 @@ article {
     padding-top: 1%;
     padding-bottom: 1%;
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 767px) {
     article {
         padding: 2%;
         padding-top: 1%;
@@ -75,7 +75,7 @@ footer {
     background-color: azure;
 }
 #markdown {
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 0%;
     color: black;
     mix-blend-mode: normal;
