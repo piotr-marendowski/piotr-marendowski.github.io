@@ -53,7 +53,7 @@ footer {
     background-color: white;
     border: solid;
     border-color: black;
-    border-radius: 3px;
+    border-radius: 1px;
     color: black;
     padding: 5px 15px;
     text-align: center;
@@ -68,6 +68,9 @@ footer {
     color: black;
     mix-blend-mode: normal;
 }
+#img-mobile {
+    width:10em;
+}
 /* change things for mobile */
 @media (max-width: 767px) {
     article {
@@ -79,5 +82,8 @@ footer {
         color: gray;
         text-decoration: none;
         font-size: 10px;
+    }
+    #img-mobile {
+        width:5em;
     }
 }
