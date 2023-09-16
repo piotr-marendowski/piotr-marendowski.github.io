@@ -16,9 +16,6 @@ h1 {
 p {
     font-size: 20px;
 }
-a {
-    text-decoration: none;
-}
 img {
     padding: 2%;
     display: block;
@@ -66,8 +63,6 @@ input[type="button"]:hover {
     background-color: azure;
 }
 #markdown {
-    text-decoration: none;
-    margin-left: 0%;
     color: black;
     mix-blend-mode: normal;
 }
