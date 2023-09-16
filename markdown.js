@@ -146,50 +146,6 @@
 
     return '<div class="markdown">' + mdHTML + md.after( md.parser( md.before(mdText) ) ) + '</div>'
   }
-  
-  //===== TOC support
-  md.toc = function (srcDiv, tocDiv, options ) {
-
-    // select elements, set title
-    var tocSelector = (options&&options.css) || 'h1,h2,h3,h4'
-    var tocTitle = (options&&options.title) || 'Table of Contents'
-    var toc = document.getElementById(srcDiv).querySelectorAll( tocSelector )
-    var html = '<div class="toc"><ul>' + (tocTitle=='none'? '' : '<h3>' + tocTitle + '</h3>');
-    
-    // loop for each element,add <li> element with class in TAG name.
-    for (var i=0; i<toc.length; i++ ) {
-      if (toc[i].id.substr(0,6)=='no-toc') continue;
-      if (!toc[i].id) toc[i].id = "toc-item-" + i;
-      html += '<li class="' + toc[i].nodeName + '" title="#' + toc[i].id + '" onclick="location=this.title">' 
-      html += toc[i].textContent + '</a></li>';
-    }
-    
-    document.getElementById(tocDiv).innerHTML = html + "</ul>";
-
-    //===== scrollspy support (ps: add to document.body if element(scrollspy) not found)
-    if ( options && options.scrollspy ) {
-      
-      (document.getElementById(options.scrollspy)||document).onscroll = function () {
-      
-          // get TOC elements, and viewport position   
-          var list = document.getElementById(tocDiv).querySelectorAll('li')
-          var divScroll = document.getElementById(options.scrollspy) || document.documentElement
-          var divHeight = divScroll.clientHeight || divScroll.offsetHeight 
-          
-          // loop for each TOC element, add/remove scrollspy class
-          for (var i=0; i<list.length; i++) {
-            var div = document.getElementById( list[i].title.substr(1) )
-            var pos = (div? div.offsetTop - divScroll.scrollTop + 10: 0 )  
-            if ( pos>0 && pos<divHeight ) {
-              list[i].className = list[i].className.replace('active','') + ' active' // classList.add( 'active' );
-            } else {
-              list[i].className = list[i].className.replace('active','') // classList.remove( 'active' );
-            }
-          }
-        }
-      
-    }
-    //===== end of scrollspy
   }  
   
   if (typeof exports==='object') { 
@@ -227,7 +183,6 @@ md.load = function (fname) {
   
     document.getElementById('right-panel').innerHTML = md.html(md.text=this.responseText) + '<br>'
     document.getElementById('right-panel').scrollTop = 0
-    md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
     
     document.title = document.getElementById('title').innerHTML = md.yaml.title || 'Markdown Page' 
     document.getElementById('theme').textContent = md.yaml.style ||''
