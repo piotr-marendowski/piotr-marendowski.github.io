@@ -66,6 +66,7 @@ input[type="button"]:hover {
     background-color: azure;
 }
 #markdown {
+    text-decoration: none;
     margin-left: 0%;
     color: black;
     mix-blend-mode: normal;
