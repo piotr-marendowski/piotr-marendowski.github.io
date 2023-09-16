@@ -183,6 +183,7 @@ md.load = function (fname) {
   
     document.getElementById('right-panel').innerHTML = md.html(md.text=this.responseText) + '<br>'
     document.getElementById('right-panel').scrollTop = 0
+    md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
     
     document.title = document.getElementById('title').innerHTML = md.yaml.title || 'Markdown Page' 
     document.getElementById('theme').textContent = md.yaml.style ||''
