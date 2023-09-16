@@ -16,21 +16,6 @@ a 	 { background:transparent; text-decoration:none; color:navy } a:active, a:hov
 #menu button:disabled {cursor:not-allowed; opacity:0.5}: disabled *{pointer-events:none}
 #left-panel 	{ position:absolute; left:0; bottom:0; width:380px; top:48px; border:1px solid grey; overflow:auto; padding:8px }
 #right-panel 	{ position:absolute; right:0; bottom:0; left:400px; top:48px; border:1px solid grey; overflow:auto; padding:8px 16px }
-
-@media print{
-  #header, #left-panel { display:none!important }
-  #right-panel { position:relative; width:100%; left:0px; top:0px; border:none; height:auto; overflow:hidden }
-}
-
-@media screen and (min-width: 600px) and (max-width: 900px){ 
-  #header { width:100%; height:80px; }
-  #left-panel 	{ display:none; position:absolute; left:0px; width:100%; top:80px; border:1px solid grey; overflow:auto; padding:4px 8px }
-  #right-panel 	{ position:absolute; left:0px; width:100%;; top:80px; border:1px solid grey; overflow:auto; padding:4px 8px }
-}
-@media screen and (max-width: 600px) {
-  #header { width:100%; height:100px; }
-  #left-panel 	{ display:none; position:absolute; left:0px; width:100%; top:100px; border:1px solid grey; overflow:auto; padding:4px 8px }
-  #right-panel 	{ position:absolute; left:0px; width:100%;; top:100px; border:1px solid grey; overflow:auto; padding:4px 8px }
 }
 </style>
 
@@ -68,16 +53,6 @@ function toggleHTML() {
      document.getElementById('right-panel').innerHTML = '<xmp>' + html.replace(/xmp\>/g,'xmp&gt;') + '</xmp>' 
   }
 }
-
-//=== apply dark mode style
-function darkmode() {
-  var css = document.getElementById('theme').textContent
-  var dark = ' body, pre, code { background:#333!important; color:#ccc!important } '
-  dark += '\n #header, a  {background:#555;} th, tr:nth-child(even) {color:#333} '
-  dark += '\n .active { color:white!important } #left-panel {background:#444;}  ' 
-  document.getElementById('theme').textContent = (css===(md.yaml.style||'')? dark : md.yaml.style||'')
-}
-
 //=== load and parser markdown file. 
 md.load = function (fname) { 
   var xmlhttp = new XMLHttpRequest();
@@ -104,34 +79,6 @@ md.load = function (fname) {
   
   xmlhttp.open("GET", fname , true)
   xmlhttp.send();
-}
-
-
-//=== touch event for mobile (swipe to show/hide left-panel)
-if (window.innerWidth<900) {
-
-  function toggleTOC(show) {
-    var disp = document.getElementById('left-panel').style.display
-    document.getElementById('left-panel').style.display = show||(disp=='none')? 'block' : 'none'
-    document.getElementById('right-panel').style.display = show||(disp=='none')? 'none' : 'block' 
-  }
-  
-  window.addEventListener( 'touchstart', function(e) { document.touch=e.changedTouches[0] } )
-  
-  window.addEventListener( 'touchend', function(e) { 
-  	 var distX = e.changedTouches[0].clientX - document.touch.clientX
-  	 var distY = e.changedTouches[0].clientY - document.touch.clientY
-  	 if ( Math.abs(distY) < 15 && distX > 90 ) {
-  			e.preventDefault(); 
-        toggleTOC(true)
-  	 } else if ( Math.abs(distY) < 15 && distX < -30 ) {
-  			e.preventDefault(); 
-        toggleTOC(false) 
-  	 }
-    } );
-    
-    document.getElementById('left-panel').onclick = function() {toggleTOC(false)}
-    document.getElementById('title').onclick = function() {toggleTOC()} 
 }
 
 </script>
