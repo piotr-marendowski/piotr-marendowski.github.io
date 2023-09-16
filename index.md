@@ -16,6 +16,8 @@ ASVDHIOVSDVAS
 
 link: [dark reader](https://github.com/darkreader/darkreader) 
 
+![alt text](assets/github-logo.png "title")
+
 *oafi*
 
 Moim ulubionym hobby jest czytanie książek. Uwielbiam zagłębiać się w różne światy i poznawać nowe postacie.
