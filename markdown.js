@@ -219,15 +219,6 @@ function toggleHTML() {
   }
 }
 
-//=== apply dark mode style
-function darkmode() {
-  var css = document.getElementById('theme').textContent
-  var dark = ' body, pre, code { background:#333!important; color:#ccc!important } '
-  dark += '\n #header, a  {background:#555;} th, tr:nth-child(even) {color:#333} '
-  dark += '\n .active { color:white!important } #left-panel {background:#444;}  ' 
-  document.getElementById('theme').textContent = (css===(md.yaml.style||'')? dark : md.yaml.style||'')
-}
-
 //=== load and parser markdown file. 
 md.load = function (fname) { 
   var xmlhttp = new XMLHttpRequest();
