@@ -9,22 +9,15 @@ header {
     padding-bottom: 1%;
     margin: 1%;
 }
-a {
-    color: gray;
-    text-decoration: none;
-    font-size: 30px;
-}
-a:hover {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-}
 h1 {
     font-size: 40px;
     text-align: center;
 }
 p {
     font-size: 20px;
+}
+a {
+    text-decoration: none;
 }
 img {
     padding: 2%;
@@ -42,6 +35,16 @@ footer {
     margin-top: 10%;
     left: 50%;
     transform: translateX(-50%);
+}
+#a1 {
+    color: gray;
+    text-decoration: none;
+    font-size: 30px;
+}
+#a1:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 #nav {
     display: inline;
@@ -79,12 +82,12 @@ footer {
         padding-top: 1%;
         padding-bottom: 1%;
     }
-    a {
+    #a1 {
         color: gray;
         text-decoration: none;
         font-size: 20px;
     }
-    a:hover {
+    #a1:hover {
         color: gray;
         text-decoration: none;
         font-size: 20px;
