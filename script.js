@@ -1,14 +1,9 @@
-function question(answer)
+function contact()
 {
-    if (answer == "yes") {
-        document.getElementById("answer").innerHTML = "Get in contact with me:<br>piotr-marendowski [at] tutanota.com";
-        document.getElementById("answer").scrollIntoView();
-    }
-    else if (answer == "no") {
-        document.getElementById("answer").innerHTML = "Glad to hear that!";
-        document.getElementById("answer").scrollIntoView();
-    }
+    document.getElementById("answer").innerHTML = "piotr-marendowski [at] tutanota.com";
+    document.getElementById("answer").scrollIntoView();
 }
+
 const fs = require('fs');
 const zeroMd = require('zero-md');
 
