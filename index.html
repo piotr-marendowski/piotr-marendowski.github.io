@@ -31,6 +31,10 @@ a 	 { background:transparent; text-decoration:none; color:navy } a:active, a:hov
   <div id="right-panel" style=""></div>
 </div>
 
+<button style="display:none" onclick="toggleHTML()" accesskey=s>ShowHTML</button> 
+<button style="display:none" onclick="darkmode()" accesskey=k>Dark</button> 
+<style id=theme comment="for additional style"></style>
+
 <script>
 /*****************************************************************************
  * casual-markdown-page - view markdown as web page
@@ -49,6 +53,16 @@ function toggleHTML() {
      document.getElementById('right-panel').innerHTML = '<xmp>' + html.replace(/xmp\>/g,'xmp&gt;') + '</xmp>' 
   }
 }
+
+//=== apply dark mode style
+function darkmode() {
+  var css = document.getElementById('theme').textContent
+  var dark = ' body, pre, code { background:#333!important; color:#ccc!important } '
+  dark += '\n #header, a  {background:#555;} th, tr:nth-child(even) {color:#333} '
+  dark += '\n .active { color:white!important } #left-panel {background:#444;}  ' 
+  document.getElementById('theme').textContent = (css===(md.yaml.style||'')? dark : md.yaml.style||'')
+}
+
 //=== load and parser markdown file. 
 md.load = function (fname) { 
   var xmlhttp = new XMLHttpRequest();
