@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Casual-Markdown</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="markdown.js"></script>
+    <script src="script.js"></script>
 </head>
 
-<body onload="md.load( location.href.split('?file=')[1]||'index.md' )">
+<body onload="md.load(location.href.split('?file=')[1]||'index.md')">
 	<header>
         <p id="nav"><a id="a1" href="index.html">Main page</a></p>
         <p id="nav"><a id="a1" href="blog.html">Blog</a></p>
@@ -17,18 +19,14 @@
 
     <article>
         <div id=header class="theme">
-          <span id=title>casual-markdown</span>
-          <span id=menu style="float:right; padding:12px"></span>
+            <span id=title></span>
+            <span id=menu style="float:right; padding:12px"></span>
         </div>
 
         <div id=content>
-          <div id="left-panel" style=""></div>
-          <div id="right-panel" style=""></div>
+            <div id="left-panel" style=""></div>
+            <div id="right-panel" style=""></div>
         </div>
-
-        <button style="display:none" onclick="toggleHTML()" accesskey=s>ShowHTML</button> 
-        <button style="display:none" onclick="darkmode()" accesskey=k>Dark</button> 
-        <style id=theme comment="for additional style"></style>
     </article>
 
     <footer>

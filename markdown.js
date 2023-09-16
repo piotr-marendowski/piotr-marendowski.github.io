@@ -42,13 +42,13 @@
       block = block.replace(/(\s?)(var|let|const|=>|for|next|do|while|loop|continue|break|switch|try|catch|finally)(\s)/gim,'$1<b>$2</b>$3')
     }
     
-    return '<pre title="' + title + '"><button onclick="md.clipboard(this)">copy</button><code>'  + block + '</code></pre>'
+    return '<pre title="' + title + '"><code>' + block + '</code><br><br><button onclick="md.clipboard(this)">Copy snippet</button></pre>'
   }
 
   // copy to clipboard for code-block
   md.clipboard = function (e) {
-    navigator.clipboard.writeText( e.parentNode.innerText.replace('copy\n','') )
-    e.innerText = 'copied'
+    navigator.clipboard.writeText( e.parentNode.innerText.replace('Copy snippet','') )
+    e.innerText = 'Snippet copied'
   }
 
   //===== parse markdown string into HTML string (exclude code-block)
@@ -230,8 +230,8 @@ md.load = function (fname) {
     document.getElementById('right-panel').scrollTop = 0
     md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
     
-    document.title = document.getElementById('title').innerHTML = md.yaml.title || 'Markdown Page' 
-    document.getElementById('theme').textContent = md.yaml.style ||''
+    document.getElementById('title').innerHTML = md.yaml.title || '<h3>Contents:</h3>' 
+    document.getElementById('theme').textContent = md.yaml.style || ''
 
     document.body.style.display='block';
     if (fname.indexOf('#')>0) location.href = fname.substr( fname.indexOf('#') ) 
