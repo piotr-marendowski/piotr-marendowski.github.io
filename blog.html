@@ -25,19 +25,31 @@
 
     <article><zero-md src="posts/14-09-2023-first.md"><template><style id="markdown"></style></template></zero-md></article>
 
-
     <div id=header class="theme">
       <span id=title>casual-markdown</span>
       <span id=menu style="float:right; padding:12px"></span>
     </div>
 
     <script>
+    function toggleHTML() {
+      var html = document.getElementById('right-panel').innerHTML
+      if (html.substr(0,5)=='<xmp>') {
+         document.getElementById('right-panel').innerHTML = html.substr(5, html.length-11)
+      } else {
+         document.getElementById('right-panel').innerHTML = '<xmp>' + html.replace(/xmp\>/g,'xmp&gt;') + '</xmp>' 
+      }
+    }
+
     //=== load and parser markdown file. 
     md.load = function (fname) { 
       var xmlhttp = new XMLHttpRequest();
       
       xmlhttp.onload = function (e) {
       
+        document.getElementById('right-panel').innerHTML = md.html(md.text=this.responseText) + '<br>'
+        document.getElementById('right-panel').scrollTop = 0
+        md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
+        
         document.title = document.getElementById('title').innerHTML = md.yaml.title || 'Markdown Page' 
         document.getElementById('theme').textContent = md.yaml.style ||''
 
@@ -55,6 +67,7 @@
       xmlhttp.open("GET", fname , true)
       xmlhttp.send();
     }
+
     </script>
 
 

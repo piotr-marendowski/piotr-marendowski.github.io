@@ -41,6 +41,11 @@ a 	 { background:transparent; text-decoration:none; color:navy } a:active, a:hov
   <span id=menu style="float:right; padding:12px"></span>
 </div>
 
+<div id=content>
+  <div id="left-panel" style=""></div>
+  <div id="right-panel" style=""></div>
+</div>
+
 <button style="display:none" onclick="toggleHTML()" accesskey=s>ShowHTML</button> 
 <button style="display:none" onclick="darkmode()" accesskey=k>Dark</button> 
 <style id=theme comment="for additional style"></style>
@@ -54,12 +59,35 @@ a 	 { background:transparent; text-decoration:none; color:navy } a:active, a:hov
  * https://github.com/casualwriter/casual-markdown
 *****************************************************************************/
 
+//=== toggle HTML in right-panel. (this is a hidden function for developer)
+function toggleHTML() {
+  var html = document.getElementById('right-panel').innerHTML
+  if (html.substr(0,5)=='<xmp>') {
+     document.getElementById('right-panel').innerHTML = html.substr(5, html.length-11)
+  } else {
+     document.getElementById('right-panel').innerHTML = '<xmp>' + html.replace(/xmp\>/g,'xmp&gt;') + '</xmp>' 
+  }
+}
+
+//=== apply dark mode style
+function darkmode() {
+  var css = document.getElementById('theme').textContent
+  var dark = ' body, pre, code { background:#333!important; color:#ccc!important } '
+  dark += '\n #header, a  {background:#555;} th, tr:nth-child(even) {color:#333} '
+  dark += '\n .active { color:white!important } #left-panel {background:#444;}  ' 
+  document.getElementById('theme').textContent = (css===(md.yaml.style||'')? dark : md.yaml.style||'')
+}
+
 //=== load and parser markdown file. 
 md.load = function (fname) { 
   var xmlhttp = new XMLHttpRequest();
   
   xmlhttp.onload = function (e) {
   
+    document.getElementById('right-panel').innerHTML = md.html(md.text=this.responseText) + '<br>'
+    document.getElementById('right-panel').scrollTop = 0
+    md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
+    
     document.title = document.getElementById('title').innerHTML = md.yaml.title || 'Markdown Page' 
     document.getElementById('theme').textContent = md.yaml.style ||''
 
