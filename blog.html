@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
     <script src="script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.js"></script>
+    <body onload="md.load( location.href.split('?file=')[1]||'index.md' )">
+
 </head>
 <body>
 	<header>
@@ -21,6 +24,39 @@
     </article><hr>
 
     <article><zero-md src="posts/14-09-2023-first.md"><template><style id="markdown"></style></template></zero-md></article>
+
+
+    <div id=header class="theme">
+      <span id=title>casual-markdown</span>
+      <span id=menu style="float:right; padding:12px"></span>
+    </div>
+
+    <script>
+    //=== load and parser markdown file. 
+    md.load = function (fname) { 
+      var xmlhttp = new XMLHttpRequest();
+      
+      xmlhttp.onload = function (e) {
+      
+        document.title = document.getElementById('title').innerHTML = md.yaml.title || 'Markdown Page' 
+        document.getElementById('theme').textContent = md.yaml.style ||''
+
+        document.body.style.display='block';
+        if (fname.indexOf('#')>0) location.href = fname.substr( fname.indexOf('#') ) 
+        
+        var i, html = ''
+        for (i in md.yaml.menu) { 
+           html += '<a href="' + (md.yaml.menu[i].substr(-3)==='.md'? '?file=' : '' )
+           html += md.yaml.menu[i] + '">' + i + '</a>' 
+        }
+        document.getElementById('menu').innerHTML = html
+      }
+      
+      xmlhttp.open("GET", fname , true)
+      xmlhttp.send();
+    }
+    </script>
+
 
     <footer>
         <p id="footer">Any questions?</p>
