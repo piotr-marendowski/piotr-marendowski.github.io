@@ -4,10 +4,9 @@ function contact()
     document.getElementById("answer").scrollIntoView();
 }
 
-function hide(id1, id2)
+function hide(id)
 {
-    var e = document.getElementById(id1);
-    var a = document.getElementById(id2);
+    var e = document.getElementById(id);
 
     if (e.style.display == 'block') {
         e.style.display = 'none';
@@ -15,15 +14,6 @@ function hide(id1, id2)
     }
     else {
         e.style.display = 'block';
-        document.getElementById("hide").value="Hide"
-    }
-
-    if (a.style.display == 'block') {
-        a.style.display = 'none';
-        document.getElementById("hide").value="Show"
-    }
-    else {
-        a.style.display = 'block';
         document.getElementById("hide").value="Hide"
     }
 }
