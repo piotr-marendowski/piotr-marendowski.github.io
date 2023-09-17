@@ -93,6 +93,10 @@ button:hover {
     font-size: 30px;
     margin: 10px;
 }
+#answer {
+    font-size: 30px;
+    margin: 10px;
+}
 
 /* change things for mobile */
 @media (max-width: 767px) {
@@ -123,5 +127,9 @@ button:hover {
     }
     #button:hover {
         background-color: white;
+    }
+    #answer {
+        font-size: 15px;
+        margin: 10px;
     }
 }
