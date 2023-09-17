@@ -11,21 +11,21 @@
 
 <body onload="md.load(location.href.split('?file=')[1]||'index.md')">
 	<header>
-        <p id="nav"><a id="a1" href="index.html">Main page</a></p>
-        <p id="nav"><a id="a1" href="blog.html">Blog</a></p>
+        <p id="nav"><a id="a1" href="index.html">Blog</a></p>
         <p id="nav"><a id="a1" href="projects.html">Projects</a></p>
         <p id="nav"><a id="a1" href="about.html">About</a></p>
     </header><hr>
 
     <article>
-        <div id=header class="theme">
-            <span id=title></span>
-            <span id=menu style="float:right; padding:12px"></span>
+        <input id="hide" type="button" value="Hide" onclick="hide('left-panel', 'title')">
+
+        <div id="header" class="theme">
+            <p id="title" style="display: block;"></p>
+            <div id="left-panel" style="display: block;"></div>
         </div>
 
-        <div id=content>
-            <div id="left-panel" style=""></div>
-            <div id="right-panel" style=""></div>
+        <div id="content">
+            <div id="right-panel"></div>
         </div>
     </article>
 

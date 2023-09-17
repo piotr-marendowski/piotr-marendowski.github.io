@@ -230,7 +230,7 @@ md.load = function (fname) {
     document.getElementById('right-panel').scrollTop = 0
     md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
     
-    document.getElementById('title').innerHTML = md.yaml.title || '<h3>Contents:</h3>' 
+    document.getElementById('title').innerHTML = md.yaml.title || '<h3>Contents</h3>' 
     document.getElementById('theme').textContent = md.yaml.style || ''
 
     document.body.style.display='block';
