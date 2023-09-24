@@ -152,7 +152,7 @@
   md.toc = function (srcDiv, tocDiv, options ) {
 
     // select elements, set title
-    var tocSelector = (options&&options.css) || 'h1,h2,h3,h4'
+    var tocSelector = (options&&options.css) || 'h2,h3,h4'
     var tocTitle = (options&&options.title) || 'Table of Contents'
     var toc = document.getElementById(srcDiv).querySelectorAll( tocSelector )
     var html = '<div class="toc"><ul>' + (tocTitle=='none'? '' : '<h3>' + tocTitle + '</h3>');
@@ -230,7 +230,7 @@ md.load = function (fname) {
     document.getElementById('right-panel').scrollTop = 0
     md.toc( 'right-panel', 'left-panel', { title:'none', scrollspy:'right-panel'} )
     
-    document.getElementById('title').innerHTML = md.yaml.title || '<h3>Contents</h3>' 
+    document.getElementById('title').innerHTML = md.yaml.title || '' 
     document.getElementById('theme').textContent = md.yaml.style || ''
 
     document.body.style.display='block';

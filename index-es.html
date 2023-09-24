@@ -9,11 +9,11 @@
     <script src="script.js"></script>
 </head>
 
-<body onload="md.load(location.href.split('?file=')[1]||'index.md')">
+<body onload="md.load(location.href.split('?file=')[1]||'index-es.md')">
 	<header>
-        <p id="nav"><a class="a1" href="index.html">Blog</a></p>
-        <p id="nav"><a class="a1" id="projects" href="projects.html">Projects</a></p>
-        <p id="nav"><a class="a1" id="about" href="about.html">About</a></p>
+        <p id="nav"><a class="a1" href="index-es.html">Blog</a></p>
+        <p id="nav"><a class="a1" id="projects" href="projects-es.html">Proyectos</a></p>
+        <p id="nav"><a class="a1" id="about" href="about-es.html">Sobre</a></p>
     </header><hr>
     <a onclick="change_lang()"><img style="width:3em; float: right;" src="assets/usa-spain.png"></a>
 
@@ -32,8 +32,8 @@
     </article>
 
     <footer>
-        <p id="footer">Any questions?</p>
-        <input id="c1" type="button" value="Contact" onclick="contact()">
+        <p id="footer">¿Alguna pregunta?</p>
+        <input id="contact" type="button" value="Contacto" onclick="contact()">
         <p id="answer"></p>
     </footer>
     <script>
@@ -43,9 +43,11 @@
             document.getElementById("projects").href="projects-es.html";
             document.getElementById("about").innerHTML="Sobre";
             document.getElementById("about").href="about-es.html";
+            document.getElementById("contents").innerHTML="Contenido";
         }
         else
             document.getElementById("hide").value="Hide";
     </script>
+
 </body>
 </html>
