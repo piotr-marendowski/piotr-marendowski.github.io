@@ -2,8 +2,9 @@
 
 ### Uses [casual-markdown-page](https://github.com/casualwriter/casual-markdown-page) for markdown-to-site conversion.
 
-## File tree
-.
+## Tree
+<pre>
+/
 ├── posts/
 │   ├── en/ - english
 │   │   └── ...
@@ -17,4 +18,5 @@
 ├── script.js - the rest of js functions
 ├── style.css - style
 └── assets/
+</pre>
 `*-es` are spanish equivalents.
