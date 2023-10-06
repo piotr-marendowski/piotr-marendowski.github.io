@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="markdown.js"></script>
     <script src="script.js"></script>
+    <script>
+        if (window.location.href === "https://piotr-marendowski.github.io")
+            window.location.href = "https://piotr-marendowski.github.io/index.html";
+    </script>
 </head>
 
 <body onload="md.load(location.href.split('?file=')[1]||'index.md')">
