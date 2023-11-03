@@ -46,6 +46,9 @@ img {
 #img1 {
     width: 40%;
 }
+#projects {
+     font-size: 3em;
+}
 article {
     padding: 15%;
     padding-top: 0%;
@@ -63,6 +66,9 @@ article {
 }
 #name {
     font-size: 4em;
+}
+#projects {
+     font-size: 3em;
 }
 /* change things for mobile */
 @media (max-width: 767px) {
@@ -82,9 +88,12 @@ article {
         font-size: 20px;
     }
     #img1 {
-        width: 70%;
+        width: 80%;
     }
     #name {
-        font-size: 3em;
+        font-size: 4em;
+    }
+    #projects {
+         font-size: 2em;
     }
 }
