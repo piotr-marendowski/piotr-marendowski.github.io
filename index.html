@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Blog</title>
+    <link rel="icon" href="https://github.com/piotr-marendowski.png?size=256">
+    <title>Piotr's site</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="markdown.js"></script>
-    <script src="script.js"></script>
-    <script>
-        // auto redirect to index.html
-        if (window.location.href === "https://piotr-marendowski.github.io")
-            window.location.href = "https://piotr-marendowski.github.io/index.html";
-        if (window.location.href === "http://127.0.0.1:8080")
-            window.location.href = "http://127.0.0.1:8080/index.html";
-    </script>
 </head>
 
-<body onload="md.load(location.href.split('?file=')[1]||'index.md')">
-	<header>
-        <p id="nav"><a class="a1" id="blog" href="index.html">Blog</a></p>
-        <p id="nav"><a class="a1" id="projects" href="projects.html">Projects</a></p>
-        <p id="nav"><a class="a1" id="about" href="about.html">About</a></p>
-    </header><hr>
-    <a onclick="change_lang()"><img style="width:3em; float: right;" src="assets/usa-spain.png"></a>
-
+<body>
+    <!-- header -->
+    <!-- <div class="container">
+        <a class="title" href="index.html"><h1>About</h1></a>
+        <a class="title" href="blog.html"><h1>Blog</h1></a>
+    </div> -->
     <article>
-        <input id="hide" type="button" onclick="hide('header')">
+        <h2 style="font-size: 4em;">Piotr Marendowski</h2>
 
-        <div id="header" class="theme" style="display: block;">
-            <h3 id="contents">Contents</h3>
-            <p id="title"></p>
-            <div id="left-panel"></div>
+        <!-- images -->
+        <div style="display: flex; justify-content: left; flex-wrap: wrap;">
+            <img style="height:10em;" src="https://github.com/piotr-marendowski.png?size=256">
+            <img style="height:10em;" src="assets/mypic1.jpg">
+            <img style="height:10em;" src="assets/mypic2.jpg">
+            <img style="height:10em;" src="assets/meandtheboys.jpg">
+            <img style="height:10em;" src="assets/mypic3.jpg">
         </div>
 
-        <div id="content">
-            <div id="right-panel"></div>
+        <!-- flags -->
+        <div style="display: flex; justify-content: left;">
+            <a id="a1" style="padding-right: 1%;">
+                <img style="width: 2em;" src="assets/pl.png">
+            </a>
+            <a id="a1" style="padding-right: 1%;">
+                <img style="width: 2em;" src="assets/en.png">
+            </a>
+            <a id="a1" style="padding-right: 1%;">
+                <img style="width: 2em;" src="assets/es.png">
+            </a>
         </div>
+
+        <!-- about me -->
+        <p>I'm an IT student learning various CS subjects, contributing to some open source projects and creating my own. For my programming activity I welcome you to see my <a href="https://github.com/piotr-marendowski">Github</a>.</p>
+        <p>Right now I'm really interesed in Linux projects and open source software for it. I like the idea of using open source software, and tailoring it to my needs.</p>
+        <p>I really like programming and would like to continue my career in this field. If you need anything from me - don't hesitate to send me a mail or a DM on <a href="bogdan">Discord</a>!</p>
+        </div>
+        <!-- shields -->
+        <div style="display: flex; justify-content: left;">
+            <a id="a1" style="padding-right: 1%;"
+                href="https://github.com/piotr-marendowski" target="_blank">
+                <img style="width: 3em;" src="assets/github-logo.png">
+            </a>
+            <a id="a1" style="padding-right: 1%;"
+                href="https://www.linkedin.com/in/piotr-marendowski-350728262" target="_blank">
+                <img style="width: 3em;" src="assets/linkedin-logo.png">
+            </a>
+            <a id="a1" style="padding-right: 1%;"
+               href="mailto:piotr-marendowski@tutanota.com">
+                <img style="width: 3em;" src="assets/mail-logo.png">
+            </a>
+            <a id="a1" style="padding-right: 1%;"
+               href="bogdan">
+                <img style="width: 3em;" src="assets/discord-logo.png">
+            </a>
+        </div>
+        <hr>
+
+
+        <b><h2 style="font-size: 3em;">Featured projects</h2></b>
+
+        <!-- IvoryOS -->
+        <a href="https://github.com/piotr-marendowski/ivoryos" target="_blank"><h2 style="font-size: 2em;">IvoryOS</h2></a>
+        <a href="https://github.com/piotr-marendowski/ivoryos" target="_blank"><img style="width: 40%;"
+                src="https://raw.githubusercontent.com/piotr-marendowski/ivoryos/master/assets/ivoryOS.png"></a>
+        <h4>July - November 2023</h4>
+        <p>Arch based GNU/Linux distribution made as a learning projects of mine.
+        One of my first big projects, which took me months of making.
+        First was an install script made so that I can just install
+        Arch Linux with my default settings, but grew into the whole OS.</p>
+
+        <!-- sip -->
+        <a href="https://github.com/piotr-marendowski/sip" target="_blank"><h2 style="font-size: 2em;">Simple Image Previewer</h2></a>
+        <a href="https://github.com/piotr-marendowski/sip" target="_blank"><img style="width: 40%;"
+                src="https://raw.githubusercontent.com/piotr-marendowski/sip/master/screen1.png"></a>
+        <h4>September 2023</h4>
+            <p>I made sip in order to learn
+            <a href="https://x.org/releases/current/doc/libX11/libX11/libX11.html" target="_blank">Xlib</a>
+            and <a href="https://docs.enlightenment.org/api/imlib2/html/" target="_blank">Imlib2</a>.
+            Is written in pure C, and is compatible with Unix philosophy :). Thanks to it I learned how
+            computer graphics, and GUI promgrams for
+            and <a href="https://x.org/wiki/" target="_blank">Xorg</a> work.</p>
+
+        <!-- fff -->
+        <a href="https://github.com/piotr-marendowski/fff" target="_blank"><h2 style="font-size: 2em;">fff</h2></a>
+        <a href="https://github.com/piotr-marendowski/fff" target="_blank"><img style="width: 40%;"
+                src="https://camo.githubusercontent.com/dc5dbcae87d1ea1cc1d98183e7aa0f0df19a236f46fdd23dba6cd8e79d418831/68747470733a2f2f692e696d6775722e636f6d2f5632614359576e2e706e67"></a>
+        <h4>September 2023</h4>
+            <p>A fork of <a href="https://github.com/dylanaraps/fff" target="_blank">fff</a>
+            file manager which right now is unmaintained, which adds a plethora of features.
+            Right now I use it daily as my file manager. Shell script gave me a lot of headaches,
+            but I'm more or less happy with the result.</p>
     </article>
-
-    <footer>
-        <p id="footer">Any questions?</p>
-        <input id="c1" type="button" value="Contact" onclick="contact()">
-        <p id="answer"></p>
-    </footer>
-    <script>
-        if (window.location.href.includes("/es/") || window.location.href.includes("-es")) {
-            document.getElementById("hide").value="Ocultar";
-            document.getElementById("blog").href="index-es.html";
-            document.getElementById("projects").innerHTML="Proyectos";
-            document.getElementById("projects").href="projects-es.html";
-            document.getElementById("about").innerHTML="Sobre";
-            document.getElementById("about").href="about-es.html";
-            document.getElementById("c1").value="Contacto";
-            document.getElementById("footer").innerHTML="¿Alguna pregunta?";
-        }
-        else
-            document.getElementById("hide").value="Hide";
-    </script>
 </body>
 </html>
