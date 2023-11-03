@@ -41,7 +41,8 @@ function change_lang()
 {
     var page = window.location.href;
 
-    if (page.endsWith("index.html") || page === "https://piotr-marendowski.github.io/")
+
+    if (page.endsWith("index.html"))
         window.location.href = window.location.href.replace("index.html", "index-es.html");
     else if (page.endsWith("index-es.html"))
         window.location.href = window.location.href.replace("index-es.html", "index.html");
