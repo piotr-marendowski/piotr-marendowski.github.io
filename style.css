@@ -43,10 +43,13 @@ img {
     padding-bottom: 1%;
     display: inline-block;
 }
+#img1 {
+    width: 40%;
+}
 article {
     padding: 15%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 .a1 {
     color: gray;
@@ -58,12 +61,15 @@ article {
     text-decoration: none;
     font-size: 30px;
 }
+#name {
+    font-size: 4em;
+}
 /* change things for mobile */
 @media (max-width: 767px) {
     article {
-        padding: 2%;
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding: 0%;
+        padding-top: 0%;
+        padding-bottom: 0%;
     }
     #a1 {
         color: gray;
@@ -74,5 +80,11 @@ article {
         color: gray;
         text-decoration: none;
         font-size: 20px;
+    }
+    #img1 {
+        width: 70%;
+    }
+    #name {
+        font-size: 2em;
     }
 }
