@@ -68,7 +68,7 @@ article {
     font-size: 4em;
 }
 #projects {
-     font-size: 3em;
+     font-size: 2em;
 }
 /* change things for mobile */
 @media (max-width: 767px) {
