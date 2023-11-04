@@ -24,26 +24,42 @@ h1 {
     text-decoration-color: #337dff;
 }
 h2 {
+    margin-top: 0%;
     text-decoration: underline;
+    text-decoration-style: 3px solid;
     text-decoration-color: #337dff;
 }
 a {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: #337dff;
+    position: relative;
 }
-a:hover {
-    color: gray;
+.underline {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    background: #2b2f34;
+}
+/* animation */
+.underline::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #337dff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.underline:hover::after {
+    width: 100%; 
+    left: 0;
 }
 p {
     font-size: 20px;
 }
-img {
-    padding-right: 2%;
-    padding-bottom: 1%;
-    display: inline-block;
-}
-#img1 {
+.img1 {
     width: 40%;
 }
 #projects {
@@ -54,21 +70,11 @@ article {
     padding-top: 0%;
     padding-bottom: 0%;
 }
-.a1 {
-    color: gray;
-    text-decoration: none;
-    font-size: 30px;
-}
-.a1:hover {
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-}
-#name {
+.name {
     font-size: 4em;
 }
-#projects {
-     font-size: 2em;
+.projects {
+     font-size: 3em;
 }
 /* change things for mobile */
 @media (max-width: 767px) {
@@ -77,23 +83,13 @@ article {
         padding-top: 0%;
         padding-bottom: 0%;
     }
-    #a1 {
-        color: gray;
-        text-decoration: none;
-        font-size: 20px;
-    }
-    #a1:hover {
-        color: gray;
-        text-decoration: none;
-        font-size: 20px;
-    }
-    #img1 {
+    .img1 {
         width: 80%;
     }
-    #name {
+    .name {
         font-size: 4em;
     }
-    #projects {
+    .projects {
          font-size: 2em;
     }
 }

@@ -16,5 +16,6 @@ window.onload = function () {
     md = document.createElement("zero-md")
     md.setAttribute("src", getQuery("src"))
     md.setAttribute("no-shadow", "")
+    md.style.cssText = 'color:#ffa500; !important;background-color:black';
     document.getElementById("mdcontainer").append(md)
 }
