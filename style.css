@@ -62,9 +62,6 @@ p {
 .img1 {
     width: 40%;
 }
-#projects {
-     font-size: 3em;
-}
 article {
     padding: 15%;
     padding-top: 0%;
@@ -74,7 +71,7 @@ article {
     font-size: 4em;
 }
 .projects {
-     font-size: 3em;
+    font-size: 3em;
 }
 /* change things for mobile */
 @media (max-width: 767px) {
