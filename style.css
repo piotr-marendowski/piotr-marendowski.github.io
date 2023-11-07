@@ -60,7 +60,7 @@ p {
     font-size: 20px;
 }
 .img1 {
-    width: 40%;
+    width: 30em;
 }
 article {
     padding: 15%;
@@ -81,7 +81,7 @@ article {
         padding-bottom: 0%;
     }
     .img1 {
-        width: 90%;
+        width: 10em;
     }
     .name {
         font-size: 2em;
