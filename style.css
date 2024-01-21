@@ -11,19 +11,13 @@ body {
     background-color: #1d2021;
     color: #e8e6e3;
 }
-.container {
-    text-align: center;
-}
-.title {
-    display: inline-block;
-    margin: 1%;
-}
 h1 {
     margin: 1%;
     text-decoration: underline;
     text-decoration-color: #337dff;
 }
 h2 {
+    margin-top: 0%;
     text-decoration: underline;
     text-decoration-style: 3px solid;
     text-decoration-color: #337dff;
