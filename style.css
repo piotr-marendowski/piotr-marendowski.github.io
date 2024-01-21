@@ -24,11 +24,11 @@ h1 {
     text-decoration-color: #337dff;
 }
 h2 {
-    margin-top: 0%;
     text-decoration: underline;
     text-decoration-style: 3px solid;
     text-decoration-color: #337dff;
 }
+/* LINKS */
 a {
     position: relative;
 }
@@ -59,8 +59,18 @@ a {
 p {
     font-size: 20px;
 }
-.img1 {
-    width: 30em;
+img {
+    height: 10em;
+    padding: 10px;
+}
+.img_project {
+    height: 20em;
+}
+.img_flag {
+    height: 2em;
+    padding: 0%;
+    padding-left: 30%;
+    padding-top: 7%;
 }
 article {
     padding: 15%;
@@ -70,9 +80,6 @@ article {
 .name {
     font-size: 4em;
 }
-.projects {
-    font-size: 3em;
-}
 /* change things for mobile */
 @media (max-width: 767px) {
     article {
@@ -80,8 +87,8 @@ article {
         padding-top: 0%;
         padding-bottom: 0%;
     }
-    .img1 {
-        width: 20em;
+    .img_project {
+        height: 10em;
     }
     .name {
         font-size: 2em;

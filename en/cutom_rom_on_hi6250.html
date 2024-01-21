@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <link rel="icon" href="https://github.com/piotr-marendowski.png?size=256">
+    <title>Installing custom ROM on Huawei hi6250 devices</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="container">
+        <a class="underline" href="../index.html" style="font-size: 2em;margin-right: 1%;">About me</a>
+        <a class="underline" href="../blog.html" style="font-size: 2em;">Blog</a>
+    </div><br><br>
+
+    <article>
+        21.01.2024<br>
+        <h2 class="projects">Installing custom ROM on Huawei hi6250 devices</h2>
+        <p>This guide is mostly for future me just in case I'll need to reflash/flash custom ROM on these Huawei devices. Because of how Huawei made its smartphones, we need to follow more complicated steps than when flashing custom ROMs on other OEMs.</p>
+
+        <p>For unlocking the bootloader/FRP see <a class="underline" href="https://github.com/mashed-potatoes/PotatoNV">PotatoNV</a>.</p>
+
+        <p>For AOSP up to Android 11 (without Gapps!) there's no need for resizing the system partition on the stock, but for LineageOS you need to follow the resizing steps from <a class="underline" href="https://xdaforums.com/t/rom-prague-11-lineageos-18-1-for-huawei-p8-lite-2017.4275551/">this thread</a>, do resizing on Windows, because Linux scripts are incomplete! I had installed LineageOS 18.1 with Android 11 and it was working mostly well, but I think that it's too much for this phone at this stage, so I reverted to AOSP.</p>
+
+        <p>For installing AOSP I followed <a class="underline" href="https://xdaforums.com/t/rom-11-darkjoker360-aosp-11-for-huawei-p8-lite-2017.4220705/">this thread</a>. It didn't pass the splash screen so I flashed it again, this time I decrypted the data partition using DarkJoker's utility and AltairFR's from the Lineage thread, I also flashed Magisk (don't know which of these worked, I think that decrypting and Magisk combined). Also I looked into /vendor/etc/fstab file and didn't have encryption, see <a class="underline" href="https://xdaforums.com/t/aio-prepare-your-device-and-your-knowledge-for-any-gsi.3812024/">this thread</a>.</p>
+
+        <p>Maybe in some time I'll update this with optimization stuff.</p>
+
+    </article>
+</body>
+</html>
