@@ -3,13 +3,18 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/open-sans-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('font/open-sans-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 body {
     font-family: 'Open Sans';
     mix-blend-mode: normal;
     background-color: #1d2021;
     color: #e8e6e3;
+}
+article {
+    padding: 15%;
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 h1 {
     margin: 1%;
@@ -22,6 +27,23 @@ h2 {
     text-decoration-style: 3px solid;
     text-decoration-color: #337dff;
 }
+p {
+    font-size: 20px;
+}
+img {
+    height: 10em;
+    padding: 10px;
+}
+.img_project {
+    height: 20em;
+}
+.img_flag {
+    height: 2em;
+    padding: 0%;
+    padding-left: 30%;
+    padding-top: 7%;
+}
+
 /* LINKS */
 a {
     position: relative;
@@ -45,35 +67,11 @@ a {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
-
 .underline:hover::after {
     width: 100%; 
     left: 0;
 }
-p {
-    font-size: 20px;
-}
-img {
-    height: 10em;
-    padding: 10px;
-}
-.img_project {
-    height: 20em;
-}
-.img_flag {
-    height: 2em;
-    padding: 0%;
-    padding-left: 30%;
-    padding-top: 7%;
-}
-article {
-    padding: 15%;
-    padding-top: 0%;
-    padding-bottom: 0%;
-}
-.name {
-    font-size: 4em;
-}
+
 /* change things for mobile */
 @media (max-width: 767px) {
     article {
