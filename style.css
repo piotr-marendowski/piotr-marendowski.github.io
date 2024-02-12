@@ -17,14 +17,7 @@ article {
     padding-bottom: 0%;
 }
 h1 {
-    margin: 1%;
     text-decoration: underline;
-    text-decoration-color: #337dff;
-}
-h2 {
-    margin-top: 0%;
-    text-decoration: underline;
-    text-decoration-style: 3px solid;
     text-decoration-color: #337dff;
 }
 p {
