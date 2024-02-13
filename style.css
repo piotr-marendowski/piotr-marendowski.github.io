@@ -1,18 +1,16 @@
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('font/open-sans-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
 body {
-    font-family: 'Open Sans';
+    font-family: "Verdana", sans-serif;
     mix-blend-mode: normal;
     background-color: #1d2021;
     color: #e8e6e3;
 }
 article {
     padding: 15%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.blog {
+    padding: 25%;
     padding-top: 0%;
     padding-bottom: 0%;
 }
@@ -29,12 +27,6 @@ img {
 }
 .img_project {
     height: 20em;
-}
-.img_flag {
-    height: 2em;
-    padding: 0%;
-    padding-left: 30%;
-    padding-top: 7%;
 }
 
 /* LINKS */
@@ -67,7 +59,7 @@ a {
 
 /* change things for mobile */
 @media (max-width: 767px) {
-    article {
+    article, .blog {
         padding: 0%;
         padding-top: 0%;
         padding-bottom: 0%;
